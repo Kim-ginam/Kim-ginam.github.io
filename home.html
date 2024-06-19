@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 방화벽 차단</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .error-message {
+            font-size: 18px;
+            color: #333;
+        }
+        .domain {
+            font-weight: bold;
+            color: #d9534f;
+            margin-top: 20px;
+        }
+        .url {
+            font-weight: bold;
+            color: #d9534f;
+            margin-top: 20px;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="error-message">해당 사이트는 웹 방화벽에 의해 접근이 차단되었습니다.</p>
+        <p>서비스 이용에 불편을 드려 죄송합니다.</p>
+        <p>문제 해결을 위해 아래의 URL을 복사하여 메일로 문의주시길 부탁드립니다.</p>
+        <p class="domain" id="domain"></p>
+        <p class="url" id="url"></p>
+        <p class="contact">security@iteyes.co.kr</p>
+        <p>감사합니다.</p>
+    </div>
+    <script>
+        document.getElementById('url').innerText = window.location.href;
+        document.getElementById('domain').innerText = url.hostname;
+    </script>
+</body>
+</html>
