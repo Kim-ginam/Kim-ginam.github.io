@@ -48,6 +48,7 @@
         <p>감사합니다.</p>
     </div>
     <script>
+        const url = new URL(window.location.href);
         document.getElementById('url').innerText = window.location.href;
         document.getElementById('domain').innerText = url.hostname;
     </script>
